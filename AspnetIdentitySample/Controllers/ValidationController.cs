@@ -30,7 +30,7 @@ namespace AspnetIdentitySample.Controllers
         {
             var context = new MyDbContext();
             var UserManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(context));
-            
+
             // The default Validators that the UserManager uses are UserValidator and MinimumLengthValidator
             // You can tweak some of the settings as follows
             // This example sets the Password length to be 3 characters
@@ -38,7 +38,7 @@ namespace AspnetIdentitySample.Controllers
             {
                 AllowOnlyAlphanumericUserNames = false
             };
-             UserManager.PasswordValidator = new MinimumLengthValidator(3);
+            UserManager.PasswordValidator = new MinimumLengthValidator(3);
 
 
             if (ModelState.IsValid)
@@ -103,7 +103,7 @@ namespace AspnetIdentitySample.Controllers
             }
 
             // If we got this far, something failed, redisplay form
-            return View("Index",model);
+            return View("Index", model);
         }
     }
 }

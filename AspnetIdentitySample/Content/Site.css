@@ -1,6 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-color: #D3D3D3;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -13,7 +14,7 @@
 input,
 select,
 textarea {
-    max-width: 280px;
+    width: 100px;
 }
 
 /* styles for validation helpers */

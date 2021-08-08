@@ -1,5 +1,4 @@
-﻿using AspnetIdentitySample.IdentityExtensions;
-using AspnetIdentitySample.Models;
+﻿using AspnetIdentitySample.Models;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using System;
@@ -19,7 +18,6 @@ namespace AspnetIdentitySample.Controllers
         {
             var context = new MyDbContext();
             var userManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(context));
-            userManager.ClaimsIdentityFactory = new MyClaimsIdentityFactory<ApplicationUser>();
 
             // Create a User to SignIn
             var user = await userManager.FindAsync(model.UserName, model.Password);

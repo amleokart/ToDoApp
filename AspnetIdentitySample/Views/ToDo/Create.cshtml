@@ -4,7 +4,7 @@
     ViewBag.Title = "Create";
 }
 
-<h2>Create</h2>
+<h2 style="margin-top: 5%; color: #C71585"> Create: </h2>
 
 
 @using (Html.BeginForm()) 
@@ -12,7 +12,6 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>ToDo</h4>
         <hr />
         @Html.ValidationSummary(true)
 
@@ -34,14 +33,14 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input style="background-color: #C71585; color: white; padding: 14px 20px; margin: 8px 0; border: none; cursor: pointer; width: 100%;" type="submit" value="Create" class="btn btn-default" />
             </div>
         </div>
     </div>
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back to list", "Index")
 </div>
 
 @section Scripts {

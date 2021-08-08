@@ -4,7 +4,7 @@
     ViewBag.Title = "Edit";
 }
 
-<h2>Edit</h2>
+<h2 style="margin-top: 5%; color: #C71585"> Edit: </h2>
 
 
 @using (Html.BeginForm())
@@ -12,19 +12,18 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>ToDo</h4>
         <hr />
         @Html.ValidationSummary(true)
         @Html.HiddenFor(model => model.Id)
 
-        <div class="form-group">
+        <div class="form-group" style="width: 100%;">
             @Html.LabelFor(model => model.Description, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Description)
                 @Html.ValidationMessageFor(model => model.Description)
             </div>
         </div>
-
+        <hr />
         <div class="form-group">
             @Html.LabelFor(model => model.IsDone, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -35,7 +34,7 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
+                <input style="background-color: #C71585; color: white; padding: 14px 20px; margin: 8px 0; border: none; cursor: pointer; width: 100%;" type="submit" value="Save" class="btn btn-default" />
             </div>
         </div>
     </div>
