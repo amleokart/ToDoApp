@@ -14,8 +14,6 @@ namespace AspnetIdentitySample.IdentityExtensions
         {
             if (item.UserName.ToLower().Contains("bad"))
                 return Task.FromResult(IdentityResult.Failed("UserName cannot contain bad"));
-            else if (item.HomeTown.ToLower().Contains("unknown"))
-                return Task.FromResult(IdentityResult.Failed("HomeTown cannot contain unknown city"));
             else
                 return Task.FromResult(IdentityResult.Success);
         }

@@ -45,7 +45,6 @@ namespace AspnetIdentitySample
             //Create User=Admin with password=123456
             var user = new ApplicationUser();
             user.UserName = name;
-            user.HomeTown = "Seattle";
             user.MyUserInfo = myinfo;
             var adminresult = UserManager.Create(user, password);
 

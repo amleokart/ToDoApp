@@ -80,7 +80,6 @@ namespace AspnetIdentitySample.Controllers
             if (ModelState.IsValid)
             {
                 var user = new ApplicationUser() { UserName = model.UserName };
-                user.HomeTown = model.HomeTown;
                 user.MyUserInfo = new MyUserInfo() { FirstName = model.UserName };
 
                 // Store Gender as Claim
@@ -344,9 +343,6 @@ namespace AspnetIdentitySample.Controllers
         {
             AuthenticationManager.SignOut(DefaultAuthenticationTypes.ExternalCookie);
             var identity = await UserManager.CreateIdentityAsync(user, DefaultAuthenticationTypes.ApplicationCookie);
-            // Add more custom claims here if you want. Eg HomeTown can be a claim for the User
-            var homeclaim = new Claim(ClaimTypes.Country, user.HomeTown);
-            identity.AddClaim(homeclaim);
             AuthenticationManager.SignIn(new AuthenticationProperties() { IsPersistent = isPersistent }, identity);
         }
 

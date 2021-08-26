@@ -1,7 +1,26 @@
 ﻿@{
-    ViewBag.Title = "About";
+    ViewBag.Title = "You need help?";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+<h2>@ViewBag.Title</h2>
+<h3 style="color: #C71585">@ViewBag.Message</h3>
 
-<p>Use this area to provide additional information.</p>
+<hr />
+
+<p>ToDo app allows you to keep all your tasks and responsibilities in one place. Create an account, then log in and start writing. The application is efficient and easy to use.</p>
+<p>Let's go through the application options together: </p>
+<li>
+    <a href="/Register">Registration</a> if you have not created an account
+</li>
+<li>
+    <a href="/Login">Log in</a> after you create an account
+</li>
+<br />
+<p style="background-color: #DE1794;"><b>If you don’t create an account, you can’t start writing.</b></p>
+<br />
+<li>
+    In the <a href="/Index">ToDo</a> section you start making your list. At the beginning, you are shown a table that contains all your written tasks or responsibilities.
+</li>
+<li>
+    With the Create option you create a list item where you need to enter its description. You are offered a choice of whether it is finished, which you can edit later.
+</li>
+<li>Once created, you can edit the item you added, see its details, or delete it.</li>

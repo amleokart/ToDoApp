@@ -11,8 +11,6 @@ namespace AspnetIdentitySample.Models
 {
     public class ApplicationUser : IdentityUser
     {
-        // HomeTown will be stored in the same table as Users
-        public string HomeTown { get; set; }
         public virtual ICollection<ToDo> ToDoes { get; set; }
   
         // FirstName & LastName will be stored in a different table called MyUserInfo
@@ -43,8 +41,6 @@ namespace AspnetIdentitySample.Models
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-
-            // Change the name of the table to be Users instead of AspNetUsers
             modelBuilder.Entity<IdentityUser>()
                 .ToTable("Users");
             modelBuilder.Entity<ApplicationUser>()

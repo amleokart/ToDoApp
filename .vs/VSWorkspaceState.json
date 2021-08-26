@@ -1,13 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\AspnetIdentitySample",
-    "\\AspnetIdentitySample\\App_Data",
-    "\\AspnetIdentitySample\\App_Start",
-    "\\AspnetIdentitySample\\Content",
-    "\\AspnetIdentitySample\\Views",
-    "\\AspnetIdentitySample\\Views\\Shared"
+    ""
   ],
-  "SelectedNode": "\\AspnetIdentitySample.sln",
+  "SelectedNode": "\\ToDo.sln",
   "PreviewInSolutionExplorer": false
 }
