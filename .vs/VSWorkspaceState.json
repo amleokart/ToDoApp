@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\AspnetIdentitySample"
   ],
-  "SelectedNode": "\\ToDo.sln",
+  "SelectedNode": "\\AspnetIdentitySample\\Web.config",
   "PreviewInSolutionExplorer": false
 }
